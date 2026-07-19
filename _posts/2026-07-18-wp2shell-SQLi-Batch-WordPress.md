@@ -4,6 +4,9 @@ title: "CVE-2026-63030 + CVE-2026-60137: de SQLi ciega a RCE en WordPress, repro
 date: 2026-07-18
 categories: [pentesting, web]
 tags: [sqli, wordpress, sql-injection, wp2shell, docker, blind-sqli, rce, cve-2026-63030, cve-2026-60137]
+image:
+  path: /assets/wp2shell-image.png
+  alt: "Wp2shell"
 author: c4cker
 ---
 
@@ -31,11 +34,13 @@ WordPress soporta desde la 5.6 "batch requests" en su REST API: un POST a `/wp-j
 `/?rest_route=/batch/v1` sin pretty permalinks) con un array `requests` que el core despacha
 internamente como llamadas independientes.
 
-**CVE-2026-63030** es una confusión de rutas en `serve_batch_request_v1()`: un sub-request malformado
-(tipo `http://:`) desincroniza los arrays internos del dispatcher (`$requests`/`$validation`/
-`$matches`), y un GET a `/wp/v2/users` termina ejecutándose en un contexto de validación que no le
-corresponde. Ese contexto "prestado" es lo que deja pasar sin sanear el parámetro `author_exclude`
-hasta `WP_Query` — ahí es donde pega **CVE-2026-60137**, la SQLi real, en la cláusula:
+**CVE-2026-63030** (CVSS 3.1: **9.8 crítico**, `AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`, CNA WPScan) es
+una confusión de rutas en `serve_batch_request_v1()`: un sub-request malformado (tipo `http://:`)
+desincroniza los arrays internos del dispatcher (`$requests`/`$validation`/`$matches`), y un GET a
+`/wp/v2/users` termina ejecutándose en un contexto de validación que no le corresponde. Ese contexto
+"prestado" es lo que deja pasar sin sanear el parámetro `author_exclude` hasta `WP_Query` — ahí es
+donde pega **CVE-2026-60137** (CVSS 3.1: **5.9 medio**, `AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N`, CNA
+WPScan), la SQLi real, en la cláusula:
 
 ```
 ... post_author NOT IN (<value>) ...
@@ -50,6 +55,12 @@ backport a 6.8.6, todos el 17/07/2026, con auto-update forzado.
 El PoC público que usamos cubre `check`/`read` (SQLi ciega, sin auth) y `shell` — pero este último
 **requiere credenciales de admin ya obtenidas**, no es el 0-day sin credenciales que reportaron
 algunos medios generalistas al hablar de "RCE" sin matizar.
+
+Nota sobre el scoring: CISA, como ADP en NVD, publicó una segunda lectura que invierte el peso entre
+ambas — 7.5 para 63030 y >9.1 para 60137 — al asumir la SQLi alcanzable de forma directa. Nosotros nos
+quedamos con los números de WPScan (la CNA que reportó y tasó ambas) porque su vector refleja mejor lo
+que confirmamos en el lab: 60137 sola, sin la confusión de rutas de por medio, tiene complejidad de
+ataque alta (`AC:H`) y no es explotable sin auth en 6.8.x.
 
 ---
 
