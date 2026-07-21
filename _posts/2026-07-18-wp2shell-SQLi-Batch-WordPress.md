@@ -7,7 +7,7 @@ tags: [sqli, wordpress, sql-injection, wp2shell, docker, blind-sqli, rce, cve-20
 image:
   path: /assets/wp2shell-image.png
   alt: "Wp2shell"
-author: Luciano-Plaza
+author: c4cker
 ---
 
 Esta semana WordPress lanzó parches de emergencia (6.9.5 y 7.0.2, el 17/07/2026, con auto-update
