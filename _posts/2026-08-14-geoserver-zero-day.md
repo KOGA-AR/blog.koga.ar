@@ -18,7 +18,7 @@ El martes 12 de agosto, un investigador publicó en X los detalles de una vulner
 
 GeoServer es el servidor estándar para publicar datos geoespaciales: catastros provinciales, portales de planificación territorial, mapas de infraestructura pública, sistemas de monitoreo ambiental. Lo usan organismos que raramente aparecen en conversaciones de ciberseguridad pero que sostienen servicios críticos.
 
-En Argentina, varios organismos provinciales y nacionales lo tienen desplegado. Tucumán tiene GeoServer activo en su sistema de información territorial (IDET/GeoSPlan). El Ministerio de Ambiente lo usa para datos de suelo de la región NOA. Salta tiene su geoportal catastral vinculado a servicios WFS/WMS. No son los únicos.
+En Argentina, varios organismos provinciales y nacionales lo tienen desplegado. Tucumán tiene GeoServer activo en su [sistema de información territorial IDET/GeoSPlan](http://geosplan.tucuman.gov.ar/). El Ministerio de Ambiente lo usa para datos de suelo de la región NOA. Salta tiene su geoportal catastral vinculado a servicios WFS/WMS. No son los únicos.
 
 ---
 
@@ -82,4 +82,3 @@ Si tenés GeoServer en producción — o si no sabés con certeza si tu infraest
 - [The Hacker News — Unpatched GeoServer Zero-Day Targeted in Active Exploitation Attempts](https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html)
 - [The Hacker News — GeoServer Vulnerability Targeted to Deliver Backdoors (CVE-2024-36401)](https://thehackernews.com/2024/09/geoserver-vulnerability-targeted-by.html)
 - [Fortinet — Threat Actors Exploit GeoServer CVE-2024-36401](https://www.fortinet.com/blog/threat-research/threat-actors-exploit-geoserver-vulnerability-cve-2024-36401)
-- [GeoSPlan Tucumán — Sistema de Información Territorial](https://geosplan.tucuman.gov.ar/)
