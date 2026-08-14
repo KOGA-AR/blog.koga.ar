@@ -82,4 +82,4 @@ Si tenés GeoServer en producción — o si no sabés con certeza si tu infraest
 - [The Hacker News — Unpatched GeoServer Zero-Day Targeted in Active Exploitation Attempts](https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html)
 - [The Hacker News — GeoServer Vulnerability Targeted to Deliver Backdoors (CVE-2024-36401)](https://thehackernews.com/2024/09/geoserver-vulnerability-targeted-by.html)
 - [Fortinet — Threat Actors Exploit GeoServer CVE-2024-36401](https://www.fortinet.com/blog/threat-research/threat-actors-exploit-geoserver-vulnerability-cve-2024-36401)
-- [GeoSPlan Tucumán — Sistema de Información Territorial](http://geosplan.tucuman.gov.ar/)
+- [GeoSPlan Tucumán — Sistema de Información Territorial](https://geosplan.tucuman.gov.ar/)
