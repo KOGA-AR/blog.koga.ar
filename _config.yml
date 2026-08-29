@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
 url: ""
 
 github:
-  username: notluken # change to your GitHub username
+  username: c4cker # change to your GitHub username
 
 twitter:
   username:  # change to your Twitter username
@@ -40,7 +40,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/notluken # change to your GitHub homepage
+    - https://github.com/c4cker # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -99,7 +99,7 @@ theme_mode: # [light | dark]
 cdn: https://blog.koga.ar
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://raw.githubusercontent.com/notluken/blog.koga.ar/refs/heads/main/assets/koga-prof.png
+avatar: https://raw.githubusercontent.com/c4cker/blog.koga.ar/refs/heads/main/assets/koga-prof.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
