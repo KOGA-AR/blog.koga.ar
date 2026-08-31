@@ -99,7 +99,7 @@ theme_mode: # [light | dark]
 cdn: https://blog.koga.ar
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://raw.githubusercontent.com/c4cker/blog.koga.ar/refs/heads/main/assets/koga-prof.png
+avatar: https://raw.githubusercontent.com/KOGA-AR/blog.koga.ar/refs/heads/main/assets/koga-prof.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
