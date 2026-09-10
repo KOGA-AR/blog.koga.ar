@@ -47,10 +47,6 @@ Check Point Quantum Security Gateway es uno de los firewalls/VPN más desplegado
 corporativos medianos y grandes. Si aparece en superficie de ataque externa sin el parche aplicado,
 aparece en el reporte.
 
-Si tu organización usa Check Point y no sabés si el gateway está parcheado o correctamente
-expuesto hacia internet, [un pentest externo](https://koga.ar/servicios#pentesting) lo valida
-antes de que lo encuentre alguien que no te va a avisar.
-
 ---
 
 ## Qué hacer ahora
@@ -69,6 +65,20 @@ Check Point lanzó hotfixes de emergencia para ambas CVEs. Los productos afectad
   inesperados.
 - Si el appliance no necesita Remote Access VPN habilitado, deshabilitar el servicio reduce la
   superficie expuesta.
+
+---
+
+## ¿Sabés qué tiene expuesto tu organización?
+
+Este tipo de vulnerabilidad aparece constantemente en assessments externos: dispositivos de
+perímetro con versiones sin parchear, expuestos a internet sin saberlo. El problema no es solo
+Check Point — es no tener visibilidad sobre qué superficie real presenta tu organización hacia
+afuera.
+
+> **En KOGA hacemos pentesting externo:** mapeamos tu superficie de ataque, identificamos
+> dispositivos y servicios expuestos, y validamos qué es explotable antes de que lo haga alguien
+> con intenciones reales. Si usás Check Point o cualquier otro gateway VPN y no tenés certeza de
+> tu exposición, [hablemos](https://koga.ar/servicios#pentesting).
 
 ---
 
