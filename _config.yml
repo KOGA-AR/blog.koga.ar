@@ -9,7 +9,7 @@ theme: jekyll-theme-chirpy
 lang: es
 
 # Change to your timezone › https://zones.arilyn.cc
-timezone:
+timezone: America/Argentina/Buenos_Aires
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
